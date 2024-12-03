@@ -1,15 +1,13 @@
 package org.bankingsystem;
 
-import gui.window.RegisterPanel;
 import gui.window.UserInterface;
-
-import javax.swing.*;
+import system.Operation;
 
 public class Main {
+    Operation run;
 
-    UserInterface userInterface;
     public Main(){
-        userInterface = new UserInterface();
+        run = new Operation();
     }
     public static void main(String[] args) {
         new Main();
