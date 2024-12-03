@@ -1,6 +1,5 @@
 package org.bankingsystem;
 
-import gui.window.UserInterface;
 import system.Operation;
 
 public class Main {

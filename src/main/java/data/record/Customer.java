@@ -2,7 +2,7 @@ package data.record;
 import java.util.LinkedList;
 public class Customer {
     private LinkedList<String> customerIdLists;
-    private String customerId;
+    private final String customerId;
     private String name;
     private String surname;
     private String username;
@@ -64,6 +64,10 @@ public class Customer {
 
     public int getGeneratedId() {
         return generatedId;
+    }
+
+    public String getCustomerId() {
+        return customerId;
     }
 
     public String getName() {

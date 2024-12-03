@@ -25,7 +25,10 @@ public class UserInterface extends JFrame implements ActionListener {
         else if (e.getSource() == add) System.out.println("Hello Bitch!");
         else if (e.getSource() == cancel) initialisedLoginPanel();
         else if (e.getSource() == clear) registerPanel.clearFields();
-        else if (e.getSource() == login) verificationProcess.verifyUser();
+        else if (e.getSource() == login) {
+            verificationProcess.isUserExists(loginPanel.getTxtUserName());
+            System.out.println("Username " + loginPanel.getTxtUserName());
+        }
     }
     RegisterPanel registerPanel;
     LoginPanel loginPanel;
@@ -83,9 +86,4 @@ public class UserInterface extends JFrame implements ActionListener {
         this.setPreferredSize(new Dimension(byVal_width, byVal_height));
         pack();
     }
-    public String getTextUserName(){
-        return loginPanel.getTxtUserName();
-    }
-
-
 }
